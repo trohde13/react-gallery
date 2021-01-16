@@ -13,7 +13,7 @@ function GalleryItem({
 
     const addLike = (item) => {
         axios.put(`/gallery/like/${id}`, item)
-            .then(response = {
+            .then(response => {
                 getItems();
             }).catch(error => {
                 alert('error updating PUT');
@@ -28,13 +28,13 @@ function GalleryItem({
 
     return(
 
-        <div>
-            {isImageVisible ?
-            {item.path}
-            :
-            {item.description}
-            }
-        </div>
+        // <div>
+        //     {isImageVisible ?
+        //     {item.path}
+        //     :
+        //     {item.description}
+        //     }
+        // </div>
 
         
         <div>

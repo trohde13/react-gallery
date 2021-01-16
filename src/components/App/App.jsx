@@ -17,8 +17,8 @@ function App() {
     //GET Function
     const getItems = () => {
       axios.get('/gallery')
-        .then(response = {
-          setGalleryList(response)
+        .then(response => {
+          setGalleryList(response.data)
         }).catch(error => {
           alert('error getting gallery item');
           console.log(error);
@@ -35,7 +35,7 @@ function App() {
         <GalleryList
         galleryList={galleryList}
         />
-        
+
         <img src="images/goat_small.jpg"/>
         <img src="images/Number7-JamesJoyce.jpg"/>
         <img src="images/CastleTrim.jpg"/>
