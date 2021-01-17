@@ -35,10 +35,10 @@ function GalleryItem({
             <>
             <img src={item.path} onClick={() => flipImage(item.id)}></img>
 
-            <p><button 
+            <p className="likeBox"><button 
             className="likeBtn" 
             onClick={ () => addLike(item.id)}>💙</button>
-            Likes: {item.likes}</p>
+            {item.likes} Likes</p>
             
             </> : <>
 
@@ -47,7 +47,7 @@ function GalleryItem({
             <p><button 
             className="likeBtn" 
             onClick={ () => addLike(item.id)}>💙</button>
-            Likes: {item.likes}</p>
+            {item.likes} Likes</p>
             </>
             }
         </div>

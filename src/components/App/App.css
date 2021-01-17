@@ -1,6 +1,7 @@
 body {
   background: rgb(63,94,251);
-  background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%);
+  background: radial-gradient(circle, rgba(63,94,251,1) 75%, rgba(252,70,251,1) 100%);
+
 }
 
 .App {
@@ -9,12 +10,16 @@ body {
 }
 
 .App-header {
-  background-color: #222;
+  background-color: rgb(41, 30, 100);
   padding: 1em;
   color: white;
   margin-bottom: 1em;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  box-shadow: 0 0 6px #291528;
+  font-size: 40px;
+  line-height: 0.1em;
+  letter-spacing: 0.2em;
+  text-shadow: 10px 10px 20px #000000;
+  box-shadow: 0 0 20px #000000;
 }
 
 .App-title {
@@ -22,18 +27,18 @@ body {
 }
 
 .photoBox {
+  display: inline-block;
   border-style: double;
   margin: 5px;
   padding: 5px;
   height: 300px;
   width: 220px;
   color: black;
-  background: rgb(2,0,36);
-background: radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(250,4,240,1) 72%, rgba(38,0,255,1) 100%);
+  background-color: rgb(41, 30, 100);
   border-radius: 3px;
     -moz-border-radius: 5px;
     -webkit-border-radius: 5px;
-  box-shadow: 0 4px 6px #291528;
+  box-shadow: 0 4px 10px #291528;
 }
 
 img {
@@ -44,16 +49,37 @@ img {
   border-radius: 3px;
     -moz-border-radius: 5px;
     -webkit-border-radius: 5px;
-  box-shadow: 0 4px 6px #291528;
+  box-shadow: 0 4px 10px #291528;
 }
 
 .descriptionBox {
   object-fit: cover;
   margin: 10px;
   width: 200px;
-  width: 200px;
+  height: 200px;
+  background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(252,70,251,1) 100%);
+  border-radius: 3px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+  box-shadow: 0 4px 10px #291528;
+}
+
+.likeBox {
+  padding: 10px;
+  border-width: 2px;
+  color: black;
+  background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(252,70,251,1) 100%);
+  border-radius: 3px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+  box-shadow: 0 4px 10px #291528;
 }
 
 .likeBtn {
+  background-color: rgba(252,70,251,1);
   margin-right: 20px;
+  border-radius: 3px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+  box-shadow: 0 4px 10px #291528;
 }
