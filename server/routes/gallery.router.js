@@ -15,6 +15,7 @@ router.put(':id', (req, res) => {
     pool.query(queryText, [req.params.id, req.params.likes])
         .then((result) => {
             const galleryId = req.params.id;
+            let galleryItem = req.params.likes;
             for(const galleryItem of result) {   
                 if(galleryItem.id == galleryId) {
                     galleryItem.likes += 1;
@@ -25,7 +26,6 @@ router.put(':id', (req, res) => {
             res.sendStatus(500);
 
         })
-    
     
 }); // END PUT Route
 
