@@ -1,12 +1,12 @@
 import {useState, useEffect} from 'react';
 import axios from 'axios';
 import GalleryList from '../GalleryList/GalleryList';
-import GalleryItem from '../GalleryItem/GalleryItem';
+
 import './App.css';
 
 function App() {
 
-    const [galleryList, setGalleryList] = useState([]);
+    const [gallery, setGallery] = useState([]);
     const [galleryItem, newGalleryItem] = useState('');
 
     //on load
@@ -18,7 +18,7 @@ function App() {
     const getItems = () => {
       axios.get('/gallery')
         .then(response => {
-          setGalleryList(response.data)
+          setGallery(response.data)
         }).catch(error => {
           alert('error getting gallery item');
           console.log(error);
@@ -33,10 +33,11 @@ function App() {
         </header>
         <p>Gallery goes here</p>
         <GalleryList
-        galleryList={galleryList}
+        gallery={gallery}
+        getItems={getItems}
         />
 
-        <img src="images/goat_small.jpg"/>
+        {/* <img src="images/goat_small.jpg"/>
         <img src="images/Number7-JamesJoyce.jpg"/>
         <img src="images/CastleTrim.jpg"/>
         <img src="images/GDTatMia.jpg"/>
@@ -54,7 +55,7 @@ function App() {
         <img src="images/Rome1.jpg"/>
         <img src="images/Room217.jpg"/>
         <img src="images/Family1.jpg"/>
-        <img src="images/NewHouse1.jpg"/>
+        <img src="images/NewHouse1.jpg"/> */}
       </div>
     );
 }

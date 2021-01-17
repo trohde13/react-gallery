@@ -101,7 +101,7 @@ const galleryItems = [
         path: 'images/Family1.jpg', 
         description: 'Photo from 2019 of my wife & I with our 2 pups: Ava & Oscar.', 
         likes: 0 
-    }
+    },
     { 
         id: 18, 
         path: 'images/NewHouse1.jpg', 

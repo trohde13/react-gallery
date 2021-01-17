@@ -1,49 +1,57 @@
 import {useState} from 'react';
-import GalleryList from '../GalleryList/GalleryList';
-import './GalleryItem.css';
+import axios from 'axios';
+
+//import './GalleryItem.css';
 
 function GalleryItem({
     //list of deconstructed props
-    
-    galleryItems,
+    getItems,
     item
-}){
+    }){
 
-    const [isImageVisible, setIsImageVisible] = useState(false);
+        const [isImageVisible, setIsImageVisible] = useState(true);
 
-    const addLike = (item) => {
-        axios.put(`/gallery/like/${id}`, item)
+        const addLike = (id) => {
+        axios.put(`/gallery/like/${id}`)
             .then(response => {
                 getItems();
             }).catch(error => {
                 alert('error updating PUT');
             })
+        }; //end addLike
 
-
-    }; //end addLike
-
-    const flipImage = () => {
+        const flipImage = () => {
         setIsImageVisible(!isImageVisible);
-    }
+        
+        
+        }; //end flipImage
+         
 
     return(
 
-        // <div>
-        //     {isImageVisible ?
-        //     {item.path}
-        //     :
-        //     {item.description}
-        //     }
-        // </div>
+               
+        <div class="photoBox" key={item.id}>
+            {isImageVisible ? 
+            <>
+            <img src={item.path} onClick={() => flipImage(item.id)}></img>
 
-        
-        <div>
-            <p className="likeNum">Likes: ${item.likes}</p>
-            <button 
+            <p><button 
             className="likeBtn" 
             onClick={ () => addLike(item.id)}>💙</button>
+            Likes: {item.likes}</p>
+            
+            </> : <>
+
+            <p className="descriptionBox" onClick={() => flipImage(item.id)}>{item.description}</p>
+            
+            <p><button 
+            className="likeBtn" 
+            onClick={ () => addLike(item.id)}>💙</button>
+            Likes: {item.likes}</p>
+            </>
+            }
         </div>
     )
-}
+}; //end GalleryItem
 
 export default GalleryItem;

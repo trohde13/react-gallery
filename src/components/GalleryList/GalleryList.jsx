@@ -1,26 +1,22 @@
-const galleryItems = require("../../../server/modules/gallery.data");
-import GalleryItem from './GalleryItem/GalleryItem'
-import './GalleryList.css';
+//const galleryItems = require("../../../server/modules/gallery.data");
+import GalleryItem from '../GalleryItem/GalleryItem.jsx';
+//import './GalleryList.css';
 
-function GalleryList({galleryItems}) {
+function GalleryList({gallery, getItems}) {
     return(
-        <>
+        
         <div>
-            {gallerylist.map(item => (
+            {gallery.map(item => (
             <>
-            <galleryItems
-            key = {item.id}
-            item = {item}
+            <GalleryItem
+            key={item.id}
+            item={item}
+            getItems={getItems}
             />
             </>
             ))}
         </div>
         
-        
-        <GalleryItem
-        galleryItem={galleryItem}
-        />
-        </>
 
     )
 }

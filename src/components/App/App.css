@@ -21,6 +21,21 @@ body {
   font-size: 1.5em;
 }
 
+.photoBox {
+  border-style: double;
+  margin: 5px;
+  padding: 5px;
+  height: 300px;
+  width: 220px;
+  color: black;
+  background: rgb(2,0,36);
+background: radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(250,4,240,1) 72%, rgba(38,0,255,1) 100%);
+  border-radius: 3px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+  box-shadow: 0 4px 6px #291528;
+}
+
 img {
   object-fit: cover;
   margin: 10px;
@@ -30,4 +45,15 @@ img {
     -moz-border-radius: 5px;
     -webkit-border-radius: 5px;
   box-shadow: 0 4px 6px #291528;
+}
+
+.descriptionBox {
+  object-fit: cover;
+  margin: 10px;
+  width: 200px;
+  width: 200px;
+}
+
+.likeBtn {
+  margin-right: 20px;
 }
