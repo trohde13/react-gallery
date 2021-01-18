@@ -12,6 +12,7 @@ function GalleryItem({
         const [isImageVisible, setIsImageVisible] = useState(true);
 
         const addLike = (id) => {
+            
         axios.put(`/gallery/like/${id}`)
             .then(response => {
                 getItems();

@@ -6,21 +6,18 @@ const galleryItems = require('../modules/gallery.data');
 // DO NOT MODIFY THIS FILE FOR BASE MODE
 
 // PUT Route
-router.put(':id', (req, res) => {
+router.put('/like/:id', (req, res) => {
     console.log(req.params);
-    const queryText = `
-    UPDATE "galleryItems"
-    SET "likes" = $2
-    WHERE "id" = $1`
-    pool.query(queryText, [req.params.id, req.params.likes])
+    let id = req.params.id;
+
+    let queryText = `
+        UPDATE "galleryItems"
+        SET "likes" = "likes" + 1
+        WHERE "id" = $1;`
+    pool.query(queryText, [id])
         .then((result) => {
-            const galleryId = req.params.id;
-            let galleryItem = req.params.likes;
-            for(const galleryItem of result) {   
-                if(galleryItem.id == galleryId) {
-                    galleryItem.likes += 1;
-                }
-            }
+            console.log(result.rows);
+            res.sendStatus(200);
         }).catch((error) => {
             console.log(error);
             res.sendStatus(500);
