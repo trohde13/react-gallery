@@ -2,7 +2,7 @@ CREATE TABLE "galleryItems" (
 	"id" SERIAL PRIMARY KEY,
 	"path" VARCHAR(255),
 	"description" text,
-	"likes" INTEGER
+	"likes" INTEGER DEFAULT 0
 );
 
 INSERT INTO "galleryItems" ("path", "description")
