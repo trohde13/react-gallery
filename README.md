@@ -22,11 +22,9 @@ The stretch goals included additional functionality, such as storing and retriev
 
 ## Screen Shot
 
-Include one or two screen shots of your project here (optional). Remove if unused.
+![gallery page](images/react-weekend-project.png)
 
 ### Prerequisites
-
-Link to software that is required to install the app (e.g. node).
 
 - [Node.js](https://nodejs.org/en/)
 - Express
@@ -51,9 +49,6 @@ How does someone use this application? Tell a user story here.
 1. View the photos on the page
 2. Click on photo image to view description, click again on description to return to the image
 3. Click heart button to like photo. Click as many times as you want!
-4. xxx
-5. xxx
-6. xxx
 
 
 ## Built With
