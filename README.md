@@ -49,7 +49,7 @@ React.js, axios, Javascript, CSS
 
 ## Acknowledgement
 Thanks to my pod-mates this week: Collin Radichel and Woody Kromar for bouncing ideas around and troubleshooting as we went. Also thanks to Justin Applegren for looking over the code during debugging and helping troubleshoot with fresh eyes!
-And, thanks to [Prime Digital Academy](www.primeacademy.io) who equipped and helped me to make this application a reality.
+And, thanks to [Prime Digital Academy](https://www.primeacademy.io) who equipped and helped me to make this application a reality.
 
 ## Support
-If you have suggestions or issues, please email me at [trohde@rocketmail.com]
+If you have suggestions or issues, please email me at [rohde.t@gmail.com]
